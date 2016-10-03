@@ -11,6 +11,13 @@
   <description>Just a pom that makes it easy to build both projects at the same time.</description>
 <profiles>
    <profile>
+         <id>all</id>
+          <modules>
+           <module>multi-module</module>  
+           <module>single-module</module>
+         </modules> 
+   </profile>        
+   <profile>
          <id>multi</id>
           <modules>
            <module>multi-module</module>        
