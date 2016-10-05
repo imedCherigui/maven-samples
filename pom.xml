@@ -33,5 +33,34 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
+         
+  <properties>
+    <!-- Sonar -->
+    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+    <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+    <sonar.language>java</sonar.language>
+</properties>
+   <build> 
+    <plugins>
+       <plugin>
+             <groupId>org.jacoco</groupId>
+             <artifactId>jacoco-maven-plugin</artifactId>
+             <version>0.6.0.201210061924</version>
+             <configuration>
+                 <destFile>${sonar.jacoco.reportPath}</destFile>
+                 <append>true</append>
+             </configuration>
+             <executions>
+                 <execution>
+                     <id>agent</id>
+                     <goals>
+                         <goal>prepare-agent</goal>
+                     </goals>
+                 </execution>
+             </executions>
+         </plugin>      
+    </plugins>         
+</build>         
 
 </project>
