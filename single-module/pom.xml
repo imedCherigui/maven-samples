@@ -25,7 +25,7 @@
   </distributionManagement>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
+    <finalName>${project.artifactId}-${versionNumber}</finalName>
 
     <plugins>
       <plugin>
