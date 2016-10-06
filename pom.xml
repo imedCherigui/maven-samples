@@ -34,7 +34,7 @@
     <maven>3.0.3</maven>
   </prerequisites>
   <!-- Sonar -->       
-    
+  <!--  
   <properties>    
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
@@ -62,5 +62,5 @@
          </plugin>      
     </plugins>         
 </build>         
-        
+ -->       
 </project>
